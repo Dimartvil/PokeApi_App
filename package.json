@@ -1,0 +1,19 @@
+{
+  "name": "pokeapi_app",
+  "version": "1.0.0",
+  "description": "Aplicación que presentará los recursos generados por la Api PokéApi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Vanilla_JavaScript",
+    "CSS3",
+    "HTML5",
+    "Apis",
+    "fetch",
+    "XMLHttps"
+  ],
+  "author": "Dimartvil <dimartvil@hotmail.com>",
+  "license": "MIT"
+}
