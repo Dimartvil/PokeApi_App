@@ -44,10 +44,10 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*! namespace exports */
 /*! export default [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nconst Home = () => {\n  const view = `\n    <div class=\"characters\">\n        <article class=\"character-item\">\n            <a href=\"#/id\">\n                <img src=\"\" alt=\"pokemon-name\">\n                <h2>pokemon-name</h2>\n                <span>pokemon-type 1</span>\n                <span>pokemon-type 2</span>\n            </a>\n        </article>\n    </div>\n    `;\n  return view;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);\n\n//# sourceURL=webpack://pokeapi_app/./src/pages/Home.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var _utils_pokeURLList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/pokeURLList */ \"./src/utils/pokeURLList.js\");\n/* harmony import */ var _utils_pokeList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/pokeList */ \"./src/utils/pokeList.js\");\n;\n\n\nconst Home = async () => {\n  const URLS = await (0,_utils_pokeURLList__WEBPACK_IMPORTED_MODULE_0__.default)();\n  const PokeInfo = await (0,_utils_pokeList__WEBPACK_IMPORTED_MODULE_1__.default)(URLS);\n  PokeInfo[0].map(poke => console.log(poke.name));\n  console.log(PokeInfo[0][1].types);\n  const view = `\n    <div class=\"characters\">   \n        ${PokeInfo[0].map(poke => `\n            <article class=\"character-item\">\n                <a href=\"#/${poke.name}\">\n                    <img src=\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${poke.id}.png\" alt=\"${poke.name}\">\n                    <h2>${poke.name}</h2> \n                </a>\n                ${poke.types.map(typo => `\n                    <span>${typo.type.name}</span>\n                `).join('')}\n            </article>   \n            `).join('')}\n\n    </div>\n    `;\n  return view;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);\n\n//# sourceURL=webpack://pokeapi_app/./src/pages/Home.js?");
 
 /***/ }),
 
@@ -61,7 +61,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var _pages_Home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../pages/Home */ \"./src/pages/Home.js\");\n/* harmony import */ var _templates_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../templates/Header */ \"./src/templates/Header.js\");\n/* harmony import */ var _templates_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../templates/Footer */ \"./src/templates/Footer.js\");\n/* harmony import */ var _pages_Error404__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pages/Error404 */ \"./src/pages/Error404.js\");\n/* harmony import */ var _utils_getHash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/getHash */ \"./src/utils/getHash.js\");\n/* harmony import */ var _utils_resolveRoutes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/resolveRoutes */ \"./src/utils/resolveRoutes.js\");\n;\n\n\n\n\n\nconst routes = {\n  '/': _pages_Home__WEBPACK_IMPORTED_MODULE_0__.default\n};\n\nconst router = () => {\n  const header =  false || document.getElementById('header');\n  const content =  false || document.getElementById('content');\n  const footer =  false || document.getElementById('footer');\n  header.innerHTML = (0,_templates_Header__WEBPACK_IMPORTED_MODULE_1__.default)();\n  footer.innerHTML = (0,_templates_Footer__WEBPACK_IMPORTED_MODULE_2__.default)();\n  let hash = (0,_utils_getHash__WEBPACK_IMPORTED_MODULE_4__.default)();\n  let route = (0,_utils_resolveRoutes__WEBPACK_IMPORTED_MODULE_5__.default)(hash);\n  console.log(route);\n  debugger;\n  let render = routes[route] ? routes[route] : _pages_Error404__WEBPACK_IMPORTED_MODULE_3__.default;\n  debugger;\n  content.innerHTML = render();\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);\n\n//# sourceURL=webpack://pokeapi_app/./src/routes/router.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var _pages_Home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../pages/Home */ \"./src/pages/Home.js\");\n/* harmony import */ var _templates_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../templates/Header */ \"./src/templates/Header.js\");\n/* harmony import */ var _templates_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../templates/Footer */ \"./src/templates/Footer.js\");\n/* harmony import */ var _pages_Error404__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pages/Error404 */ \"./src/pages/Error404.js\");\n/* harmony import */ var _utils_getHash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/getHash */ \"./src/utils/getHash.js\");\n/* harmony import */ var _utils_resolveRoutes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/resolveRoutes */ \"./src/utils/resolveRoutes.js\");\n;\n\n\n\n\n\nconst routes = {\n  '/': _pages_Home__WEBPACK_IMPORTED_MODULE_0__.default\n};\n\nconst router = async () => {\n  const header =  false || document.getElementById('header');\n  const content =  false || document.getElementById('content');\n  const footer =  false || document.getElementById('footer');\n  header.innerHTML = (0,_templates_Header__WEBPACK_IMPORTED_MODULE_1__.default)();\n  footer.innerHTML = (0,_templates_Footer__WEBPACK_IMPORTED_MODULE_2__.default)();\n  let hash = (0,_utils_getHash__WEBPACK_IMPORTED_MODULE_4__.default)();\n  let route = (0,_utils_resolveRoutes__WEBPACK_IMPORTED_MODULE_5__.default)(hash);\n  console.log(route);\n  let render = routes[route] ? routes[route] : _pages_Error404__WEBPACK_IMPORTED_MODULE_3__.default;\n  content.innerHTML = await render();\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);\n\n//# sourceURL=webpack://pokeapi_app/./src/routes/router.js?");
 
 /***/ }),
 
@@ -93,6 +93,34 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/utils/getData.js":
+/*!******************************!*\
+  !*** ./src/utils/getData.js ***!
+  \******************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nconst API = 'https://pokeapi.co/api/v2/pokemon/';\n\nconst getData = async poke => {\n  const URL = poke ? `${API}${poke}` : API;\n\n  try {\n    const response = await fetch(URL);\n    const data = await response.json();\n    return data;\n  } catch (error) {\n    console.log('Fetch error', error);\n  }\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getData);\n\n//# sourceURL=webpack://pokeapi_app/./src/utils/getData.js?");
+
+/***/ }),
+
+/***/ "./src/utils/getDataURL.js":
+/*!*********************************!*\
+  !*** ./src/utils/getDataURL.js ***!
+  \*********************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nconst getDataURL = async URL => {\n  try {\n    const response = await fetch(URL);\n    const data = await response.json();\n    return data;\n  } catch (error) {\n    console.log('Fetch error', error);\n  }\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getDataURL);\n\n//# sourceURL=webpack://pokeapi_app/./src/utils/getDataURL.js?");
+
+/***/ }),
+
 /***/ "./src/utils/getHash.js":
 /*!******************************!*\
   !*** ./src/utils/getHash.js ***!
@@ -104,6 +132,34 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nconst getHash = () => location.hash.slice(1).toLocaleLowerCase().split('/')[1] || '/';\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getHash);\n\n//# sourceURL=webpack://pokeapi_app/./src/utils/getHash.js?");
+
+/***/ }),
+
+/***/ "./src/utils/pokeList.js":
+/*!*******************************!*\
+  !*** ./src/utils/pokeList.js ***!
+  \*******************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var _getDataURL__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getDataURL */ \"./src/utils/getDataURL.js\");\n;\n\nconst pokeList = async URLS => {\n  const pokeInfo = [];\n  const PROMISES = URLS.map(url => (0,_getDataURL__WEBPACK_IMPORTED_MODULE_0__.default)(url));\n  await Promise.all(PROMISES).then(result => pokeInfo.push(result));\n  return pokeInfo;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (pokeList);\n\n//# sourceURL=webpack://pokeapi_app/./src/utils/pokeList.js?");
+
+/***/ }),
+
+/***/ "./src/utils/pokeURLList.js":
+/*!**********************************!*\
+  !*** ./src/utils/pokeURLList.js ***!
+  \**********************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var _getData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getData */ \"./src/utils/getData.js\");\n;\n\nconst pokeURLList = async () => {\n  const pokes = await (0,_getData__WEBPACK_IMPORTED_MODULE_0__.default)();\n  console.log(pokes);\n  const pokesURLS = pokes.results.map(poke => poke.url);\n  console.log(pokesURLS);\n  return pokesURLS;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (pokeURLList);\n\n//# sourceURL=webpack://pokeapi_app/./src/utils/pokeURLList.js?");
 
 /***/ }),
 

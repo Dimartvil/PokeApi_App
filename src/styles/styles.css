@@ -28,7 +28,7 @@ a{
     width: 100%;
     height: 10vh;
     max-height: 100px;
-    background-color: rgba(17, 150, 50, 0.8);
+    background-color: rgba(104, 81, 207, 0.8);
     display: flex;
     align-items: center;
 }
@@ -55,13 +55,36 @@ a{
 
 section.characters_display{
     width: 100%;
-    height: 80vh;
-    background-color: rgba(235, 25, 95, 0.8);
+    min-height: 80vh;
+    background-color: rgba(181, 186, 195, 0.8);
     
+}
+
+.characters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.character-item{
+    border-radius: 25px;
+    padding: 20px;
+    background-color: ivory;
+    margin:0 10px ;
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.character-item img{
+    max-width: 250px;
+    width: 100%;
 }
 
 .footer{
     width: 100%;
     height: 10vh;
-    background-color: rgba(235, 25, 95, 0.8);
+    background-color: rgba(181, 186, 195, 0.8);
 }
