@@ -6,6 +6,7 @@
 
 html{
     font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -76,11 +77,20 @@ section.characters_display{
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .character-item img{
     max-width: 250px;
     width: 100%;
+}
+
+.character-item h2::first-letter{
+    text-transform: uppercase;
+}
+
+.types > span{
+    text-transform: capitalize;
 }
 
 .footer{

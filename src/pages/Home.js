@@ -18,9 +18,11 @@ const Home = async () => {
                     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${poke.id}.png" alt="${poke.name}">
                     <h2>${poke.name}</h2> 
                 </a>
+                <div class="types">
                 ${poke.types.map(typo => `
                     <span>${typo.type.name}</span>
                 `).join('')}
+                </div>
             </article>   
             `).join('')
         }

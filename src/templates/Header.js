@@ -2,7 +2,7 @@ const Header = () => {
     const view = `
     <nav>
         <ul>
-            <li><a href="/">Home</a></li>
+            <li><a href="/dist/#/">Home</a></li>
             <li> <a href="#/Show"> Show</a>
                 <ul class="options">
                     <li><a href="">All</a></li>

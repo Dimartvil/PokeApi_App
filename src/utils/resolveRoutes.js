@@ -4,6 +4,7 @@ let validRoute
         case '/': validRoute= route;
             break
         case 'contact':
+        case 'show':
         case 'about':     
             validRoute=  `/${route}`
             break;

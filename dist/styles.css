@@ -6,6 +6,7 @@
 
 html{
     font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -58,6 +59,38 @@ section.characters_display{
     min-height: 80vh;
     background-color: rgba(181, 186, 195, 0.8);
     
+}
+
+.characters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.character-item{
+    border-radius: 25px;
+    padding: 20px;
+    background-color: ivory;
+    margin:0 10px ;
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.character-item img{
+    max-width: 250px;
+    width: 100%;
+}
+
+.character-item h2::first-letter{
+    text-transform: uppercase;
+}
+
+.types > span{
+    text-transform: capitalize;
 }
 
 .footer{
