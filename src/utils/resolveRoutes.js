@@ -5,7 +5,15 @@ let validRoute
             break
         case 'contact':
         case 'show':
-        case 'about':     
+        case 'about': 
+        case 'kanto': 
+        case 'johto':
+        case 'hoenn': 
+        case 'sinnoh':
+        case 'unova':
+        case 'kalos':  
+        case 'alola':   
+        case 'galar':               
             validRoute=  `/${route}`
             break;
     

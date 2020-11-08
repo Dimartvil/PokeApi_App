@@ -5,12 +5,28 @@ import Poke from '../pages/Poke'
 import Error404 from '../pages/Error404'
 import getHash from '../utils/getHash'
 import resolveRoutes from '../utils/resolveRoutes'
+import Kanto from '../pages/Kanto'
+import Johto from '../pages/Johto'
+import Hoenn from '../pages/Hoenn'
+import Sinnoh from '../pages/Sinnoh'
+import Unova from '../pages/Unova'
+import Kalos from '../pages/Kalos'
+import Alola from '../pages/Alola'
+import Galar from '../pages/Galar'
 
 
 
 const routes = {
     '/' : Home,
-    '/poke' : Poke
+    '/poke' : Poke,
+    '/kanto': Kanto,
+    '/johto': Johto,
+    '/hoenn': Hoenn,
+    '/sinnoh': Sinnoh,
+    '/unova': Unova,
+    '/kalos': Kalos,
+    '/alola': Alola,
+    '/galar': Galar
 }
 
 

@@ -1,11 +1,14 @@
 import pokeURLList from '../utils/pokeURLList'
 import pokeList from '../utils/pokeList'
+const urlKanto = '?limit=100&offset=151'
 
 
-
-const Home = async () => {
-     const URLS = await pokeURLList()
+const Johto = async () => {
+     const URLS = await pokeURLList(urlKanto)
+     console.log(URLS)
      const PokeInfo = await pokeList(URLS)
+     PokeInfo[0].map(poke => console.log(poke.name) )
+     console.log(PokeInfo[0][1].types)
         const view = 
     `
     <div class="characters">   
@@ -32,6 +35,6 @@ const Home = async () => {
 }
 
 
-export default Home 
+export default Johto 
 
 

@@ -1,3 +1,24 @@
+:root{
+    --grass: rgba(169, 243, 194,.8);
+    --fire: rgba(231, 125, 125, 0.931);
+    --water: rgba(161, 204, 245, 0.931);
+    --bug: rgba(29, 248, 102, 0.8);
+    --normal: rgba(238, 224, 224, 0.863);
+    --poison: rgba(108, 14, 144, 0.863);
+    --electric: rgba(255, 246, 118, 0.972);
+    --ghost: rgba(156, 150, 233, 0.739);
+    --ground: rgba(245, 110, 77, 0.5);
+    --fairy: rgba(243, 141, 238, 0.945);
+    --fighting: rgba(179, 194, 243, 0.705);
+    --ice: rgb(146, 224, 255);
+    --psychic: rgb(174, 9, 250);
+    --dragon: rgb(195, 16, 100);
+    --rock: rgba(116, 112, 112, 0.644);
+    --dark: rgb(49, 46, 46);
+    --steel: rgb(183, 207, 201);
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -51,7 +72,7 @@ a{
     padding: 10px;
 }
 .options li a{
-    display: none;
+    /* display: none; */
 }
 
 section.characters_display{
@@ -68,7 +89,9 @@ section.characters_display{
 }
 
 .character-item{
+    width: 300px;
     border-radius: 25px;
+    border: 10px solid white;
     padding: 20px;
     background-color: ivory;
     margin:0 10px ;
@@ -78,15 +101,87 @@ section.characters_display{
     align-items: center;
     justify-content: center;
     text-align: center;
+    box-shadow: -1px 9px 18px -5px rgba(0,0,0,0.76);
+    opacity: .8;
+    transition: .5s;
+}
+
+
+
+.character-item.grass{
+    background-color: var(--grass);
+}
+.character-item.fire{
+    background-color: var(--fire);
+}
+
+.character-item.water{
+    background-color: var(--water);
+}
+.character-item.bug{
+    background-color: var(--bug);
+}
+.character-item.normal{
+    background-color: var(--normal);
+}
+.character-item.poison{
+    background-color: var(--poison);
+}
+.character-item.electric{
+    background-color: var(--electric);
+}
+.character-item.ghost{
+    background-color: var(--ghost);
+}
+.character-item.ground{
+    background-color: var(--ground);
+}
+.character-item.fairy{
+    background-color: var(--fairy);
+}
+.character-item.fighting{
+    background-color: var(--fighting);
+}
+.character-item.ice{
+    background-color: var(--ice);
+}
+.character-item.psychic{
+    background-color: var(--psychic);
+}
+.character-item.dragon{
+    background-color: var(--dragon);
+}
+.character-item.rock{
+    background-color: var(--rock);
+}
+.character-item.dark{
+    background-color: var(--dark);
+}
+.character-item.steel{
+    background-color: var(--steel);
 }
 
 .character-item img{
     max-width: 250px;
     width: 100%;
+    opacity: .8;
+    transition: .2s;
 }
+
+
 
 .character-item h2::first-letter{
     text-transform: uppercase;
+}
+
+.character-item:hover{
+    position: relative;
+    bottom: 10px;
+   
+}
+
+.character-item img:hover{
+    opacity: 1;
 }
 
 .types > span{

@@ -1,10 +1,8 @@
 import getData from './getData'
 
-const pokeURLList = async () => {
-    const pokes = await getData()
-    console.log(pokes)
+const pokeURLList = async url => {
+    const pokes = await getData(url)
     const pokesURLS = pokes.results.map(poke => poke.url)
-    console.log(pokesURLS)
     return pokesURLS
 }
 
