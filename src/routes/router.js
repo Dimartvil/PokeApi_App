@@ -13,6 +13,8 @@ import Unova from '../pages/Unova'
 import Kalos from '../pages/Kalos'
 import Alola from '../pages/Alola'
 import Galar from '../pages/Galar'
+import toggleMenu from  '../utils/toggleMenu'
+import addTypes from '../utils/addTypes'
 
 
 
@@ -43,6 +45,8 @@ const router = async () => {
     console.log(route)
     let render = routes[route] ?routes[route] :Error404 
     content.innerHTML = await render()
+    toggleMenu();
+    addTypes();
 }
 
 export default router

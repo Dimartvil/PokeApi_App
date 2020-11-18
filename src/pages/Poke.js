@@ -8,12 +8,12 @@ const Poke = async() =>{
     console.log(PokeInfo)
     const view = 
     `
-    <div class="characters">   
-            <article class="character-item">
+    <div class="characters-self">   
+            <article class="character-item-self"> 
                     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${PokeInfo.id}.png" alt="${PokeInfo.name}">
                     <h2>Pokemon #${PokeInfo.id}</h2> 
                     <h2>${PokeInfo.name}</h2> 
-                <div class="types">
+                <div class="types-self">
                      <h3>Types:</h3>
                     ${ PokeInfo.types.map(typo => 
                       `
