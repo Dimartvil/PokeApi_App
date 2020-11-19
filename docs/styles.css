@@ -33,7 +33,7 @@ html{
 
 body{
     font-size: 1.6rem;
-    background-image: url('../img/background.jpg');
+    background-image: url('./img/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -102,7 +102,7 @@ nav ul li a:hover{
 }
 
 .loading{
-    background-image: url('../img/200.gif');
+    background-image: url('./img/200.gif');
     background-repeat: no-repeat;
     background-position: center;
     background-size:contain;
