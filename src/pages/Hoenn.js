@@ -5,10 +5,7 @@ const urlKanto = '?limit=135&offset=251'
 
 const Hoenn = async () => {
      const URLS = await pokeURLList(urlKanto)
-     console.log(URLS)
      const PokeInfo = await pokeList(URLS)
-     PokeInfo[0].map(poke => console.log(poke.name) )
-     console.log(PokeInfo[0][1].types)
         const view = 
     `
     <div class="characters">   

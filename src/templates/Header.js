@@ -3,7 +3,7 @@ const Header = () => {
     <nav>
         <span class="menu-button">Menu</span>
         <ul class="menu"> 
-            <li><a href="/">Home</a></li>
+            <li><a href="">Home</a></li>
             <li><a href="#/Kanto">Kanto</a></li>
             <li><a href="#/Johto">Johto</a></li>
             <li><a href="#/Hoenn">Hoenn</a></li>
