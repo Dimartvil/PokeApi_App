@@ -60,7 +60,7 @@ nav{
 }
 nav .menu{
     position: absolute;
-    top: -300px;
+    top: -500px;
     width: 100%;
 }
 
@@ -80,7 +80,6 @@ nav span{
 
 nav ul li{
     list-style: none;
-    background-color: aqua;
     text-align: center;
     width: 100%;
 }
