@@ -13,6 +13,7 @@ import Unova from '../pages/Unova'
 import Kalos from '../pages/Kalos'
 import Alola from '../pages/Alola'
 import Galar from '../pages/Galar'
+import Loading from '../pages/Loading'
 import toggleMenu from  '../utils/toggleMenu'
 // import addTypes from '../utils/addTypes'
 
@@ -42,6 +43,7 @@ const router = async () => {
     let hash =  getHash()
     let route = resolveRoutes(hash)
     let render = routes[route] ?routes[route] :Error404 
+    content.innerHTML = Loading()
     content.innerHTML = await render()
     toggleMenu();
     // addTypes();

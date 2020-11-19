@@ -55,6 +55,8 @@ nav{
     z-index: 1;
     font-size: 2rem;
 }
+
+
 .menu-button{
     width: 100%;
 }
@@ -80,6 +82,7 @@ nav span{
 
 nav ul li{
     list-style: none;
+    background-color: aqua;
     text-align: center;
     width: 100%;
 }
@@ -98,10 +101,18 @@ nav ul li a:hover{
     background-color: black;
 }
 
-
+.loading{
+    background-image: url('../img/200.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
+    width: 100px;
+    margin: 0 auto;
+    min-height: 85vh;
+}
 section.characters_display{
     width: 100%;
-    min-height: 80vh;
+    min-height: 85vh;
     background-color: rgba(181, 186, 195, 0.8);
     padding-top: 30px;
     padding-bottom: 70px;
@@ -111,7 +122,7 @@ section.characters_display{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    min-height: 80vh;
+    min-height: 85vh;
 }
 
 .character-item{
